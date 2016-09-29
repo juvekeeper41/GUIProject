@@ -15,14 +15,9 @@ public class PopupController
 	public void start()
 	{
 		String answer = "sample";
-		while(answer != null && !answer.equals(""))
+		while(answer != null && !isDouble(answer))
 		{
-			
-		display.displayMessage("Hi there :D");
-		
-		answer = display.collectResponse("What is going on?");
-		display.displayMessage(answer + " is what you said.");
-		
+			answer = display.collectResponse("You need to type in a number!");
 		}
 	}
 	
@@ -49,7 +44,7 @@ public class PopupController
 			return isParseable;
 		}
 	
-		private boolean isInteger(String potentialNumber);
+		private boolean isInteger(String potentialNumber)
 		{
 			boolean isParseable = false;
 		
@@ -64,6 +59,7 @@ public class PopupController
 					display.displayMessage("Type in an integer next time!");
 				}
 				
+			return isParseable;
 	}
 }
 
