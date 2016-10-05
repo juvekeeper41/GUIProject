@@ -133,6 +133,7 @@ public class PopupController
 			display.displayMessage(derpThingy.getWords());
 		}
 		
+		
 	}
 }
 
